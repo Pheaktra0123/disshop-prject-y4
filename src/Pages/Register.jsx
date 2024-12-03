@@ -1,5 +1,6 @@
-import imagelog from '../asset/imagelog.png'
+import imagelog from '../asset/log.gif'
 import googleimg from '../asset/google.png'
+import { Link } from 'react-router-dom';
 function Register(){
     return(
         <>
@@ -21,8 +22,12 @@ function Register(){
                         <input type='text' placeholder='Password' className='w-[450px] mx-3 text-text_nav outline-none p-3 bg-bg_solf'/>
                     </div>
                     <div className='flex w-[500px] mt-10'>
-                        <button type='button' className='rounded-md w-1/2 px-3 py-2 font-medium bg-btn text-text_nav hover:bg-navbar hover:text-text_nav ease-in-out delay-200'>Login</button>
-                        <button type='button' className='w-1/2 rounded-md border-2 font-medium border-btn text-navbar px-3 py-2 mx-2'>Signup</button>
+                        <Link to="" className='text-center rounded-md w-1/2 px-3 py-2 font-medium bg-btn text-text_nav hover:bg-navbar hover:text-text_nav ease-in-out delay-200'>
+                            <button type='button' >Register</button>
+                        </Link>
+                        <Link to="/Login" className='w-1/2 rounded-md border-2 font-medium border-btn text-navbar px-3 py-2 mx-2 text-center'>
+                        <button type='button'>Login</button>
+                        </Link>
                     </div>
                     <div className='flex w-[500px] bg-bg_solf text-navbar rounded-md justify-center items-center mt-5'>
                         <img src={googleimg} className="w-[54px]" alt="" />

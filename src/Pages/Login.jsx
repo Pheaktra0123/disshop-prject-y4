@@ -1,12 +1,13 @@
-import imagelog from '../asset/imagelog.png'
+import log from '../asset/log.gif'
 import googleimg from '../asset/google.png'
+import { Link } from 'react-router-dom';
 
 
 function Login(){
     return(<>
         <section className="h-screen flex justify-between  place-items-center ">
             <div className="w-1/2 hidden md:block">
-                <img src={imagelog} alt="" className='mx-auto h-full'/>
+                <img src={log} alt="" className='mx-auto h-full'/>
             </div>
             <div className="w-1/2 text-center md:text-start">
                 <p className='text-navbar font-bold'>DISSHOP</p>
@@ -20,9 +21,9 @@ function Login(){
                     </div>
                     <div className='flex w-[500px] mt-10'>
                         <button type='button' className='rounded-md w-1/2 px-3 py-2 font-medium bg-btn text-text_nav hover:bg-navbar hover:text-text_nav ease-in-out delay-200'>Login</button>
-                        <a href="../Pages/Register.jsx"className='w-1/2 rounded-md border-2 font-medium border-btn text-navbar px-3 py-2 mx-2 text-center'>
+                        <Link to="/Register" className='w-1/2 rounded-md border-2 font-medium border-btn text-navbar px-3 py-2 mx-2 text-center'>
                             <button type='button'>Signup</button>
-                        </a>
+                        </Link>
                         
                     </div>
                     <p className='text-center w-[500px] md:w-[500px] items-center'>or</p>

@@ -4,12 +4,21 @@ import Register from './Pages/Register';
 import Login from './Pages/Login';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+import Home from './Pages/Home';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <Navbar/>
-      <Footer/>
+      <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Home/>}>
+                
+            </Route>
+            <Route  path='/Login' element={<Login/>}/>
+            <Route path='/Register' element={<Register/>}/> 
+          </Routes>
+      </BrowserRouter>
     </>
   );
 }

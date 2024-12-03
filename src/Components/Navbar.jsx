@@ -1,6 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart,faBars,faUser,faXmark} from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import Login from '../Pages/Login';
+import { Link } from 'react-router-dom';
+import Register from '../Pages/Register';
 function Navbar(){
     const [open ,setOpen]=useState(false);
         const toggleMenu =()=>{
@@ -9,7 +12,7 @@ function Navbar(){
     return (
         <>
         <header
-            className="fixed inset-x-0 top-3 z-30 mx-auto text-sm w-full max-w-screen  bg-navbar py-5  md:top-6 md:text-lg lg:text-xl rounded-xl lg:max-w-screen-xl md:max-w-screen-md">
+            className="fixed inset-x-0 top-3 z-30 mx-auto text-sm w-full max-w-screen  bg-navbar py-3  md:top-6 md:text-lg lg:text-xl rounded-xl lg:max-w-screen-xl md:max-w-screen-md">
             <div class="px-10 lg:px-16 md:px-13">
                 <div className="flex items-center justify-between">
                     <div className="flex shrink-0">
@@ -36,10 +39,10 @@ function Navbar(){
                             </a>
                         </div>
                         <div>
-                        <a className="inline-flex text-text_nav items-center justify-center bg-btn w-10 h-10 md:w-12 md:h-12 rounded-xl text-lg md:text-xl font-semibold text-white shadow-sm transition-all duration-150 hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                            href="/login">
+                        <Link  to={"/Login"} className="inline-flex text-text_nav items-center justify-center bg-btn w-10 h-10 md:w-12 md:h-12 rounded-xl text-lg md:text-xl font-semibold text-white shadow-sm transition-all duration-150 hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                           >
                                 <FontAwesomeIcon icon={faUser}/>
-                            </a>
+                            </Link>
                         </div>
                         <div id='humburger' onClick={toggleMenu} className='block md:hidden'>
                             {open?(
